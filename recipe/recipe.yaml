@@ -54,17 +54,13 @@ tests:
       # discussion at https://github.com/conda-forge/or-tools-feedstock/pull/47
       pip_check: false
   - script:
-      - pytest tests/ --ignore=tests/test_MILP.py --ignore=tests/test_sweep.py
+      - pytest tests/ --ignore=tests/test_MILP.py --ignore=tests/test_sweep.py -o cache_dir=/tmp/pytest_cache -p no:cacheprovider
+      - sleep 3
     requirements:
       run:
         - python ${{ python_min }}.*
         - pip
         - pytest
-        - pytest-cov
-        - coverage
-        - psutil
-        - memory_profiler
-        - line_profiler
         - coin-or-cbc
         - pyscipopt
         - scip <10.1
