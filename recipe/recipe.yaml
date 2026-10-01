@@ -25,7 +25,7 @@ requirements:
     - python >=${{ python_min }}
     - bidict >=0.23.1
     - bitarray >=3.4.2
-    - condeltri >=0.0.3
+    - condeltri >=0.0.6
     - darkdetect >=0.8.0
     - esy.osm.pbf >=0.1.1
     - hybgensea >=0.1.1
@@ -34,7 +34,7 @@ requirements:
     - networkx >=3.6
     - numba >=0.62.1
     - numpy >=2.0
-    - peewee >=3.17
+    - peewee >=3.17.9
     - pyomo >=6.9.5
     - pyyaml >=6.0.2
     - pyyaml-include >=2.1
@@ -67,6 +67,7 @@ tests:
         - line_profiler
         - coin-or-cbc
         - pyscipopt
+        - scip <10.1
     files:
       source:
         - tests/
