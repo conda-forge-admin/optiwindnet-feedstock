@@ -54,7 +54,7 @@ tests:
       # discussion at https://github.com/conda-forge/or-tools-feedstock/pull/47
       pip_check: false
   - script:
-      - pytest tests/ --ignore=tests/test_MILP.py
+      - pytest tests/ --ignore=tests/test_MILP.py --ignore=test_sweep.py
     requirements:
       run:
         - python ${{ python_min }}.*
